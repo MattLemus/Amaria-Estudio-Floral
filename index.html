@@ -21,6 +21,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
     <link rel="stylesheet" href="style/Style.css">
 <body>
@@ -48,7 +50,7 @@
 
     <section class="hero container">
         
-        <div class="hero-text">
+        <div class="hero-text" data-aos="fade-right">
             <h1>Amaría <br>Estudio Floral</h1>
             <h2 class="subtitle">Donde cada flor cuenta una historia</h2>
             <p class="description">
@@ -56,11 +58,11 @@
             </p>
             
             <div class="cta-group">
-                <a href="#" class="btn btn-primary">Ver Catálogo</a>
+                <a href="#mas-vendidos" class="btn btn-primary">Ver Catálogo</a>
             </div>
         </div>
 
-        <div class="hero-image-wrapper">
+        <div class="hero-image-wrapper" data-aos="fade-left">
             <div class="image-frame">
                 <img src="assets/hero-section.png" alt="Arreglo floral Amaría">
             </div>
@@ -100,7 +102,7 @@
     </section>
     <section id="seccion-ofertas" class="flash-sale-section">
         <div class="container">
-            <h2 class="sale-title">✨ Oferta Especial Reservada ✨</h2>
+            <h2 class="sale-title" data-aos="fade-up">✨ Oferta Especial Reservada ✨</h2>
             <p class="sale-subtitle">Aprovecha este descuento exclusivo en arreglos seleccionados.</p>
             
             <div class="countdown-container">
@@ -120,12 +122,13 @@
             </a>
         </div>
     </section>
-    <section class="products-section container">
-        <h2 class="section-title">Arreglos Florales Más Vendidos en Ambato</h2>
+    
+    <section  id="mas-vendidos" class="products-section container" >
+        <h2 class="section-title" data-aos="fade-up" style="margin-top: 50px;">Arreglos Florales Más Vendidos en Ambato</h2>
         
         <div class="product-grid">
             
-            <div class="product-card">
+            <div class="product-card" data-aos="fade-up">
                 <div class="card-image" onclick="openModal(1)">
                     <img src="assets/Arreglos-con-chocolates.png" alt="Ramo de Girasoles" loading="lazy">
                     <span class="tag">Económico</span>
@@ -137,7 +140,7 @@
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card"  data-aos="fade-up"> 
                 <div class="card-image" onclick="openModal(2)">
                     <img src="assets/buchon1.png" alt="Ramo Buchón con Corona" loading="lazy">
                     <span class="tag" style="background-color: var(--color-gold);">Reina</span>
@@ -149,7 +152,7 @@
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card"  data-aos="fade-up">
                 <div class="card-image" onclick="openModal(3)">
                     <img src="assets/cumple4.png" alt="Regalo Sorpresa Cumpleaños" loading="lazy">
                 </div>
@@ -160,7 +163,7 @@
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card"  data-aos="fade-up">
                 <div class="card-image" onclick="openModal(4)">
                     <img src="assets/grande2.png" alt="Ramo Gigante Lirios" loading="lazy">
                 </div>
@@ -171,7 +174,7 @@
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card" data-aos="fade-up">
                 <div class="card-image" onclick="openModal(5)">
                     <img src="assets/buchon2.png" alt="Caja 100 Rosas Rojas" loading="lazy">
                 </div>
@@ -182,7 +185,7 @@
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card"  data-aos="fade-up">
                 <div class="card-image" onclick="openModal(6)">
                     <img src="assets/rojos-blancas-corona.png" alt="Rosas Rojas con Perlas" loading="lazy">
                 </div>
@@ -197,13 +200,13 @@
 
     <section id="ofertas-exclusivas" class="products-section container" style="padding-top: 60px;">
         
-        <h2 class="section-title" style="color: var(--color-gold); font-size: 2.5rem; margin-bottom: 20px;">
+        <h2 class="section-title" data-aos="fade-up" style="color: var(--color-gold); font-size: 2.5rem; margin-bottom: 40px;">
             Descuentos exclusivos
         </h2>
         
         <div class="product-grid">
             
-            <div class="product-card" style="border-color: var(--color-gold);">
+            <div class="product-card" style="border-color: var(--color-gold);" data-aos="fade-up">
                 <div class="card-image" onclick="openModal(7)">
                     <img src="assets/lirios-nuevo.png" alt="Bouquet Dulce Romance Rosado">
                     <span class="discount-badge">-20% OFF</span>
@@ -220,7 +223,7 @@
                 </div>
             </div>
 
-            <div class="product-card" style="border-color: var(--color-gold);">
+            <div class="product-card" style="border-color: var(--color-gold);" data-aos="fade-up">
                 <div class="card-image" onclick="openModal(8)">
                     <img src="assets/girasoles1.png" alt="Ramo de Girasoles">
                     <span class="discount-badge">-20% OFF</span>
@@ -237,7 +240,7 @@
                 </div>
             </div>
 
-            <div class="product-card" style="border-color: var(--color-gold);">
+            <div class="product-card" style="border-color: var(--color-gold);" data-aos="fade-up">
                 <div class="card-image" onclick="openModal(9)">
                     <img src="assets/flores-oso.png" alt="Ramo flores con oso de peluche">
                     <span class="discount-badge">-25% OFF</span>
@@ -254,7 +257,7 @@
                 </div>
             </div>
 
-            <div class="product-card" style="border-color: var(--color-gold);">
+            <div class="product-card" style="border-color: var(--color-gold);" data-aos="fade-up">
                 <div class="card-image" onclick="openModal(10)">
                     <img src="assets/arreglo-rosas.png" alt="Arreglo de rosas">
                     <span class="discount-badge">-20% OFF</span>
@@ -273,7 +276,7 @@
         </div>
     </section>
 
-        <section class="special-touch container">
+    <section class="special-touch container" data-aos="fade-up"> >
         <div class="special-box">
             
             <h2 class="special-title">
@@ -286,7 +289,7 @@
                 
                 <div class="special-item">
     
-                    <img src="assets/mensaje.png" alt="Mensaje Personalizado" class="special-img">
+                    <img src="assets/Mensaje.png" alt="Mensaje Personalizado" class="special-img">
                     
                     <h3>Mensaje<br>Personalizado</h3>
                     <p>Incluimos una tarjeta con tus palabras para hacer el momento inolvidable.</p>
@@ -294,6 +297,48 @@
             </div>
         </div>
     </section>
+
+    <section class="about-section container">
+        <div class="about-grid">
+            
+            <div class="about-text" data-aos="fade-right">
+                <h2 class="section-title" style="text-align: left; margin-bottom: 20px;">¿Quiénes Somos?</h2>
+                
+                <p>
+                    <strong>Amaría Estudio Floral</strong> es un espacio dedicado al diseño de <strong>arreglos florales personalizados</strong>, creados con detalle, dedicación y un estilo único.
+                </p>
+                <p>
+                    Nos especializamos en composiciones florales para cada ocasión: desayunos sorpresa, regalos especiales, detalles románticos y más. Creamos experiencias que transmiten emociones reales.
+                </p>
+                <p>
+                    Realizamos <strong>envíos a domicilio</strong> en Ambato y alrededores, asegurando que tus flores lleguen frescas, hermosas y listas para sorprender.
+                </p>
+                
+            </div>
+
+            <div class="about-slider" data-aos="fade-left">
+                <div class="slider-track">
+                    <div class="slide">
+                        <img src="assets/cliente1.png" alt="Cliente Feliz Amaría">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/cliente2.png" alt="Cliente con Ramo">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/cliente3.png" alt="Entrega a Domicilio">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/cliente4.png" alt="Detalle Floral">
+                    </div>
+                    <div class="slide">
+                        <img src="assets/cliente5.png" alt="Sorpresa en Ambato">
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
 
     <footer>
         <div class="footer-main">
@@ -364,6 +409,14 @@
 
     <script src="script/script.js"></script>
 
-</body>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, /* Duración: 1 segundo (hace que sea suave) */
+            once: true,     /* La animación solo ocurre una vez al bajar (más elegante) */
+            offset: 100     /* Empieza a animar un poco antes de que el elemento se vea */
+        });
+    </script>
 
+</body>
 </html>

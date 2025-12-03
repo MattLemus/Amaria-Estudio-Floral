@@ -16,6 +16,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style/Style.css">
 </head>
 <body>
@@ -97,7 +98,7 @@
     <section class="products-section container">
         <div class="product-grid">
 
-            <div class="product-card">
+            <div class="product-card"  data-aos="fade-up">
                 <div class="card-image">
                     <img src="assets/cumple1.png" alt="Desayuno Huellitas de Amor" loading="lazy">
                 </div>
@@ -110,7 +111,7 @@
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card"  data-aos="fade-up">
                 <div class="card-image">
                     <img src="assets/cumple2.png" alt="Desayuno Ohana Love" loading="lazy">
                     <span class="tag" style="background-color: #D9534F;">Popular</span>
@@ -124,7 +125,7 @@
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card"  data-aos="fade-up">
                 <div class="card-image">
                     <img src="assets/cumple3.png" alt="Desayuno Mariposa Mágica" loading="lazy">
                 </div>
@@ -137,7 +138,7 @@
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card"  data-aos="fade-up">
                 <div class="card-image">
                     <img src="assets/desayuno1.png" alt="Desayuno Golden Roses" loading="lazy">
                 </div>
@@ -150,7 +151,7 @@
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card"  data-aos="fade-up">
                 <div class="card-image">
                     <img src="assets/cumple4.png" alt="Desayuno Súper Papá" loading="lazy">
                     <span class="tag" style="background-color: var(--color-gold);">Papá</span>
@@ -164,7 +165,7 @@
                 </div>
             </div>
 
-            <div class="product-card">
+            <div class="product-card"  data-aos="fade-up">
                 <div class="card-image">
                     <img src="assets/regalo-papa.png" alt="Desayuno Sunrise" loading="lazy">
                 </div>
@@ -226,6 +227,15 @@
     </footer>
 
     <script src="script/script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, /* Duración: 1 segundo (hace que sea suave) */
+            once: true,     /* La animación solo ocurre una vez al bajar (más elegante) */
+            offset: 100     /* Empieza a animar un poco antes de que el elemento se vea */
+        });
+    </script>
 
 </body>
 </html>
