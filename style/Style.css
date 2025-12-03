@@ -1026,3 +1026,105 @@ footer {
     }
         
 }
+/* --- SECCIÓN QUIÉNES SOMOS --- */
+.about-section {
+    padding: 80px 20px;
+    background-color: #FFF5F0; /* Fondo suave para separar secciones */
+}
+
+.about-grid {
+    display: flex;
+    align-items: center; /* Centra verticalmente texto y fotos */
+    gap: 50px; /* Espacio entre el texto y el carrusel */
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* Columna de Texto */
+.about-text {
+    flex: 1; /* Ocupa el 50% */
+    text-align: left; /* Pegado a la izquierda como pediste */
+}
+
+.about-text p {
+    margin-bottom: 15px;
+    color: #555;
+    font-size: 1.05rem;
+    line-height: 1.7;
+}
+
+.about-text strong {
+    color: var(--color-gold);
+}
+
+/* Columna del Carrusel (La ventana) */
+.about-slider {
+    flex: 1; /* Ocupa el otro 50% */
+    height: 400px; /* Altura de las fotos */
+    border-radius: 20px;
+    overflow: hidden; /* Esconde las fotos que no están en turno */
+    box-shadow: 20px 20px 0px rgba(193, 154, 91, 0.15); /* Sombra decorativa */
+    border: 3px solid white;
+    position: relative;
+}
+
+/* El Riel que se mueve */
+.slider-track {
+    width: 500%; /* 5 fotos = 500% de ancho */
+    height: 100%;
+    display: flex;
+    animation: slideShow 15s infinite; /* 15 segundos en total el ciclo */
+}
+
+.slide {
+    width: 20%; /* Cada foto ocupa el 20% del riel (100/5) */
+    height: 100%;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta la foto para que llene el hueco sin estirarse */
+}
+
+/* --- ANIMACIÓN DEL CARRUSEL (5 FOTOS) --- */
+/* Pasa cada 3 segundos aprox (2s quieto + 1s movimiento) */
+@keyframes slideShow {
+    0% { margin-left: 0; }
+    15% { margin-left: 0; } /* Pausa foto 1 */
+    
+    20% { margin-left: -100%; } /* Mueve a foto 2 */
+    35% { margin-left: -100%; } /* Pausa foto 2 */
+    
+    40% { margin-left: -200%; } /* Mueve a foto 3 */
+    55% { margin-left: -200%; } /* Pausa foto 3 */
+    
+    60% { margin-left: -300%; } /* Mueve a foto 4 */
+    75% { margin-left: -300%; } /* Pausa foto 4 */
+    
+    80% { margin-left: -400%; } /* Mueve a foto 5 */
+    95% { margin-left: -400%; } /* Pausa foto 5 */
+    
+    100% { margin-left: 0; } /* Vuelve al inicio */
+}
+
+/* --- RESPONSIVE (CELULAR) --- */
+@media (max-width: 900px) {
+    .about-grid {
+        flex-direction: column; /* Pone el texto arriba y fotos abajo */
+        text-align: center;
+    }
+    
+    .about-text {
+        text-align: center; /* En celular se ve mejor centrado */
+    }
+    
+    .section-title {
+        text-align: center !important; /* Fuerza centrado del título en móvil */
+    }
+    
+    .about-slider {
+        width: 100%;
+        height: 300px; /* Un poco más bajito en celular */
+    }
+}
