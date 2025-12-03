@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Catálogo de Arreglos Florales en Ambato | Ramos y Cajas | Amaría</title>
+    
+    <meta name="description" content="Mira nuestro catálogo de flores en Ambato. Ramos buchones, cajas de rosas, girasoles y arreglos para toda ocasión con envío a domicilio.">
+    
+    <meta name="keywords" content="catalogo flores ambato, ramos de rosas, arreglos florales ecuador, floristería a domicilio, regalos amor">
+    <meta name="geo.region" content="EC-T">
+    <meta name="geo.placename" content="Ambato">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style/Style.css">
+</head>
+<body>
+
+    <header class="container">
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <a href="index.html" class="logo">
+                <div class="logo-text">
+                    AmarÍa<br>
+                    <span style="font-size:0.65em; letter-spacing:2px; opacity:0.9;">Estudio Floral</span>
+                </div>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="desayunos.html">Desayunos</a>
+                <a href="licores.html">Licores</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>El Regalo Perfecto</h1>
+        <p>Elige la ocasión especial y encuentra el detalle ideal para sorprender.</p>
+        <div style="text-align: center; margin-bottom: 30px;">
+            <span style="color: #999; font-size: 0.8rem; letter-spacing: 1px; display: block; margin-bottom: 1px;">NUESTRAS COLECCIONES:</span>
+            
+            <div class="tags-container">
+                <span class="static-tag">Personalizado ✨</span>
+                <span class="static-tag">Cumpleaños 🎉</span>
+                <span class="static-tag">Amor ❤️</span>
+                <span class="static-tag">Aniversario 💍</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="container products-section">
+        
+        <div class="filter-container">
+            <span style="width: 100%; text-align: center; color: #999; font-size: 0.8rem; margin-bottom: 5px;">TU PRESUPUESTO:</span>
+            
+            <button class="filter-btn price-btn active" onclick="filterByPrice('all')">Todos</button>
+            <button class="filter-btn price-btn" onclick="filterByPrice('low')">Hasta $20 (Detalles)</button>
+            <button class="filter-btn price-btn" onclick="filterByPrice('mid')">$21 - $35 (Lo más vendido)</button>
+            <button class="filter-btn price-btn" onclick="filterByPrice('high')">Más de $35 (Premium)</button>
+        </div>
+
+
+        <div class="product-grid" style="grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));">
+
+            <div class="product-card" data-category="cumpleanos">
+                <div class="card-image" onclick="openModal(11)">
+                    <img src="assets/pulpo-flores.png" alt="Ramo Lavanda y Rosa">
+                    <span class="tag">Elegante</span>
+                </div>
+                <div class="card-info">
+                    <h3>Ramo "Sueño Lila"</h3>
+                    <p class="price">$20.00</p>
+                    <button onclick="openModal(11)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="amor">
+                <div class="card-image" onclick="openModal(12)">
+                    <img src="assets/flores-blancas-girasol.png" alt="Ramo con Girasol">
+                </div>
+                <div class="card-info">
+                    <h3>Bouquet "Luz de Amor"</h3>
+                    <p class="price">$45.00</p>
+                    <button onclick="openModal(12)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="cumpleanos">
+                <div class="card-image" onclick="openModal(13)">
+                    <img src="assets/flores-cumple.png" alt="Ramo Rosas Feliz Cumpleaños">
+                    <span class="tag" style="background-color: #D9534F;">Popular</span>
+                </div>
+                <div class="card-info">
+                    <h3>Ramo "Feliz Día Princesa"</h3>
+                    <p class="price">$25.00</p>
+                    <button onclick="openModal(13)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="cumpleanos">
+                <div class="card-image" onclick="openModal(14)">
+                    <img src="assets/grande.png" alt="Ramo Tonos Pastel">
+                </div>
+                <div class="card-info">
+                    <h3>Bouquet "Fantasía Pastel"</h3>
+                    <p class="price">$30.00</p>
+                    <button onclick="openModal(14)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="aniversario">
+                <div class="card-image" onclick="openModal(15)">
+                    <img src="assets/lirios-caja.png" alt="Arreglo en Caja Rosa">
+                </div>
+                <div class="card-info">
+                    <h3>Box "Jardín Secreto"</h3>
+                    <p class="price">$25.00</p>
+                    <button onclick="openModal(15)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="amor">
+                <div class="card-image" onclick="openModal(16)">
+                    <img src="assets/Jarros-flores.png" alt="Caja Cilíndrica Elegante">
+                </div>
+                <div class="card-info">
+                    <h3>Cilindro "Amor Puro"</h3>
+                    <p class="price">$50.00</p>
+                    <button onclick="openModal(16)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="amor">
+                <div class="card-image" onclick="openModal(17)">
+                    <img src="assets/love.png" alt="Ramo Love First Sight">
+                </div>
+                <div class="card-info">
+                    <h3>Ramo "Amor a Primera Vista"</h3>
+                    <p class="price">$20.00</p>
+                    <button onclick="openModal(17)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="amor">
+                <div class="card-image" onclick="openModal(18)">
+                    <img src="assets/love1.png" alt="Arreglo I Love You">
+                    <span class="tag" style="background-color: #D9534F;">Exclusivo</span>
+                </div>
+                <div class="card-info">
+                    <h3>Set "Te Amo" con Chocolates</h3>
+                    <p class="price">$30.00</p>
+                    <button onclick="openModal(18)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="cumpleanos">
+                <div class="card-image" onclick="openModal(19)">
+                    <img src="assets/pelota-flores.png" alt="Ramo Girasoles y Rosas">
+                </div>
+                <div class="card-info">
+                    <h3>Mega Bouquet "Sol Radiante"</h3>
+                    <p class="price">$40.00</p>
+                    <button onclick="openModal(19)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+    
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(20)">
+                    <img src="assets/doc-arreglos.png" alt="Arreglo Doctora Favorita" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Ramo "Doctora Favorita"</h3>
+                    <p class="price">$17.00</p>
+                    <button onclick="openModal(20)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(21)">
+                    <img src="assets/blancas-rosadas.png" alt="Bouquet Lirios Rosa" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Bouquet "Dulzura Rosa"</h3>
+                    <p class="price">$17.00</p>
+                    <button onclick="openModal(21)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(22)">
+                    <img src="assets/blancas-rosadas-moradas.png" alt="Ramo Tonos Lila" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Ramo "Encanto Lila"</h3>
+                    <p class="price">$15.00</p>
+                    <button onclick="openModal(22)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(23)">
+                    <img src="assets/blancas-rosadas-negras.png" alt="Florero Elegancia" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Florero "Elegancia Pura"</h3>
+                    <p class="price">$22.00</p>
+                    <button onclick="openModal(23)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(24)">
+                    <img src="assets/bolso-flores.png" alt="Bolso Fresh Flower" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Bag "Fresh Flowers"</h3>
+                    <p class="price">$8.00</p>
+                    <button onclick="openModal(24)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(25)">
+                    <img src="assets/bonito.png" alt="Bouquet Simpatía" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Bouquet "Simpatía"</h3>
+                    <p class="price">$7.00</p>
+                    <button onclick="openModal(25)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(26)">
+                    <img src="assets/bonito1.png" alt="Ramo Luz de Luna" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Ramo "Luz de Luna"</h3>
+                    <p class="price">$10.00</p>
+                    <button onclick="openModal(26)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(27)">
+                    <img src="assets/cumpleaños-romatico.png" alt="Ramo Cumpleaños Amor" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Ramo "Amor de Cumpleaños"</h3>
+                    <p class="price">$35.00</p>
+                    <button onclick="openModal(27)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(28)">
+                    <img src="assets/flor-centro.png" alt="Ramo Círculo de Amor" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Ramo "Círculo de Amor"</h3>
+                    <p class="price">$20.00</p>
+                    <button onclick="openModal(28)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(29)">
+                    <img src="assets/florero.png" alt="Florero Alegría Naranja" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Florero "Alegría Naranja"</h3>
+                    <p class="price">$25.00</p>
+                    <button onclick="openModal(29)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(30)">
+                    <img src="assets/rojas-blancas.png" alt="Ramo Amor Bicolor" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Ramo "Amor Bicolor"</h3>
+                    <p class="price">$10.00</p>
+                    <button onclick="openModal(30)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(31)">
+                    <img src="assets/rosa-con-globo.png" alt="Caja La Mejor Doctora" loading="lazy">
+                    <span class="tag" style="background-color: var(--color-gold);">Especial</span>
+                </div>
+                <div class="card-info">
+                    <h3>Box "La Mejor Doctora"</h3>
+                    <p class="price">$25.00</p>
+                    <button onclick="openModal(31)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(32)">
+                    <img src="assets/Rosas-blanca-centro.png" alt="Bouquet Dulzura Pastel" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Bouquet "Dulzura Pastel"</h3>
+                    <p class="price">$12.00</p>
+                    <button onclick="openModal(32)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(33)">
+                    <img src="assets/rosas-blancas-rosas.png" alt="Ramo Sueño de Mariposas" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Ramo "Sueño de Mariposas"</h3>
+                    <p class="price">$33.00</p>
+                    <button onclick="openModal(33)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(34)">
+                    <img src="assets/rosas-rosadas.png" alt="Ramo Fantasía Fucsia" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Ramo "Fantasía Fucsia"</h3>
+                    <p class="price">$10.00</p>
+                    <button onclick="openModal(34)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(35)">
+                    <img src="assets/variedad.png" alt="Bouquet Jardín Primaveral" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Bouquet "Jardín Primaveral"</h3>
+                    <p class="price">$50.00</p>
+                    <button onclick="openModal(35)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(36)">
+                    <img src="assets/variedad1.png" alt="Ramo Pasión Elegante" loading="lazy">
+                    <span class="tag" style="background-color: #000;">Premium</span>
+                </div>
+                <div class="card-info">
+                    <h3>Ramo "Pasión Elegante"</h3>
+                    <p class="price">$22.00</p>
+                    <button onclick="openModal(36)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(37)">
+                    <img src="assets/variedad2.png" alt="Ramo Encanto Natural" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Ramo "Encanto Natural"</h3>
+                    <p class="price">$15.00</p>
+                    <button onclick="openModal(37)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <footer>
+        <div class="footer-main">
+            
+            <div class="footer-column">
+                <span class="footer-title">Amaría Estudio Floral</span>
+                <p>
+                    Diseños florales personalizados, desayunos sorpresa y detalles únicos que cuentan historias. 
+                    Envíos seguros a domicilio en todo Ambato, Ecuador.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <span class="footer-title">Explorar</span>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo Completo</a></li>
+                    <li><a href="desayunos.html">Desayunos</a></li>
+                    <li><a href="licores.html">Licores</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <span class="footer-title">Síguenos</span>
+                <p style="margin-bottom: 0;">Conéctate con nosotros:</p>
+                
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/amaria_estudio.floral/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@amaria.estudio.fl" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://wa.me/593963087611" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Amaría Estudio Floral. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <div class="modal-body">
+                <div class="modal-images">
+                    <img id="modal-img" src="" alt="Producto detalle">
+                </div>
+                <div class="modal-info">
+                    <h2 id="modal-title">Nombre</h2>
+                    <p id="modal-price" class="modal-price">$00.00</p>
+                    <p id="modal-desc" class="modal-desc">Desc...</p>
+                    <a id="modal-whatsapp" href="#" target="_blank" class="btn btn-primary" style="width:100%; text-align:center;">Pedir en WhatsApp</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
+</body>
+</html>

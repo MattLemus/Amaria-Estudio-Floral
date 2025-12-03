@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Floristería en Ambato | Arreglos y Desayunos a Domicilio | Amaría</title>
+    
+    <meta name="description" content="¿Buscas el regalo perfecto? Amaría Estudio Floral ofrece arreglos florales, ramos buchones, desayunos sorpresa y licores a domicilio en Ambato. ¡Sorprende hoy!">
+    
+    <meta name="keywords" content="floristería ambato, flores a domicilio ambato, desayunos sorpresa ambato, regalos ambato, ramos buchones, rosas ecuador">
+    
+    <meta name="geo.region" content="EC-T"> <meta name="geo.placename" content="Ambato">
+    <meta name="author" content="Amaría Estudio Floral">
+
+    <meta property="og:title" content="Floristería Amaría | Regalos a Domicilio en Ambato">
+    <meta property="og:description" content="Sorprende con flores frescas y desayunos personalizados. Envíos seguros en Ambato.">
+    <meta property="og:image" content="assets/buchon1.png"> <meta property="og:type" content="website">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style/Style.css">
+<body>
+    <header class="container"> 
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <a href="index.html" class="logo">
+                <div class="logo-text">
+                    AmarÍa<br>
+                    <span style="font-size:0.65em; letter-spacing:2px; opacity:0.9;">Estudio Floral</span>
+                </div>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="desayunos.html">Desayunos</a>
+                <a href="licores.html">Licores</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero container">
+        
+        <div class="hero-text">
+            <h1>Amaría <br>Estudio Floral</h1>
+            <h2 class="subtitle">Donde cada flor cuenta una historia</h2>
+            <p class="description">
+                Diseños florales personalizados, desayunos sorpresa y envíos a domicilio en Ambato. Creamos momentos inolvidables con flores frescas y detalles únicos.
+            </p>
+            
+            <div class="cta-group">
+                <a href="#" class="btn btn-primary">Ver Catálogo</a>
+            </div>
+        </div>
+
+        <div class="hero-image-wrapper">
+            <div class="image-frame">
+                <img src="assets/hero-section.png" alt="Arreglo floral Amaría">
+            </div>
+            <div class="pattern-deco"></div>
+        </div>
+
+    </section>
+    <section class="guarantees">
+        <div class="container guarantees-container">
+            
+            <div class="guarantee-item">
+                <span class="g-icon">💐</span>
+                <span class="g-text">Flores frescas</span>
+            </div>
+
+            <div class="guarantee-item">
+                <span class="g-icon">🕒</span>
+                <span class="g-text">Entrega puntual</span>
+            </div>
+
+            <div class="guarantee-item">
+                <span class="g-icon">🎨</span>
+                <span class="g-text">Diseño fiel a la foto</span>
+            </div>
+
+            <div class="guarantee-item">
+                <span class="g-icon">🔒</span>
+                <span class="g-text">Pago seguro</span>
+            </div>
+
+            <div class="guarantee-item">
+                <span class="g-icon">❤️</span>
+                <span class="g-text">Satisfacción garantizada</span>
+            </div>
+
+        </div>
+    </section>
+    <section id="seccion-ofertas" class="flash-sale-section">
+        <div class="container">
+            <h2 class="sale-title">✨ Oferta Especial Reservada ✨</h2>
+            <p class="sale-subtitle">Aprovecha este descuento exclusivo en arreglos seleccionados.</p>
+            
+            <div class="countdown-container">
+                <div class="time-box">
+                    <span id="mins">30</span>
+                    <span class="label">Min</span>
+                </div>
+                <span class="separator">:</span>
+                <div class="time-box">
+                    <span id="secs">00</span>
+                    <span class="label">Seg</span>
+                </div>
+            </div>
+
+            <a href="#ofertas-exclusivas" class="btn btn-primary" style="background-color: white; color: var(--color-gold);">
+                Reclamar Oferta Ahora
+            </a>
+        </div>
+    </section>
+    <section class="products-section container">
+        <h2 class="section-title">Arreglos Florales Más Vendidos en Ambato</h2>
+        
+        <div class="product-grid">
+            
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(1)">
+                    <img src="assets/Arreglos-con-chocolates.png" alt="Ramo de Girasoles" loading="lazy">
+                    <span class="tag">Económico</span>
+                </div>
+                <div class="card-info">
+                    <h3>Ramo "Sol y Dulzura"</h3>
+                    <p class="price">$20.00</p>
+                    <button onclick="openModal(1)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(2)">
+                    <img src="assets/buchon1.png" alt="Ramo Buchón con Corona" loading="lazy">
+                    <span class="tag" style="background-color: var(--color-gold);">Reina</span>
+                </div>
+                <div class="card-info">
+                    <h3>Buchón "Reina Eterna"</h3>
+                    <p class="price">$40.00</p>
+                    <button onclick="openModal(2)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(3)">
+                    <img src="assets/cumple4.png" alt="Regalo Sorpresa Cumpleaños" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Box "Fiesta Sorpresa"</h3>
+                    <p class="price">$22.00</p>
+                    <button onclick="openModal(3)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(4)">
+                    <img src="assets/grande2.png" alt="Ramo Gigante Lirios" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Mega Ramo "Ensueño"</h3>
+                    <p class="price">$45.00</p>
+                    <button onclick="openModal(4)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(5)">
+                    <img src="assets/buchon2.png" alt="Caja 100 Rosas Rojas" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Caja "Majestad 100 Rosas"</h3>
+                    <p class="price">$60.00</p>
+                    <button onclick="openModal(5)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image" onclick="openModal(6)">
+                    <img src="assets/rojos-blancas-corona.png" alt="Rosas Rojas con Perlas" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Ramo "Perlas de Pasión"</h3>
+                    <p class="price">$20.00</p>
+                    <button onclick="openModal(6)" class="btn-whatsapp-card">Ver Detalles</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="ofertas-exclusivas" class="products-section container" style="padding-top: 60px;">
+        
+        <h2 class="section-title" style="color: var(--color-gold); font-size: 2.5rem; margin-bottom: 20px;">
+            Descuentos exclusivos
+        </h2>
+        
+        <div class="product-grid">
+            
+            <div class="product-card" style="border-color: var(--color-gold);">
+                <div class="card-image" onclick="openModal(7)">
+                    <img src="assets/lirios-nuevo.png" alt="Bouquet Dulce Romance Rosado">
+                    <span class="discount-badge">-20% OFF</span>
+                </div>
+                <div class="card-info">
+                    <h3>Bouquet Dulce Romance Rosado</h3>
+                    <div class="price-container">
+                        <span class="price-new">$20.00</span>
+                        <span class="price-old">$25.00</span>
+                    </div>
+                    <button onclick="openModal(7)" class="btn-whatsapp-card" style="background-color: var(--color-gold); border-color: var(--color-gold);">
+                        Ver Detalles
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" style="border-color: var(--color-gold);">
+                <div class="card-image" onclick="openModal(8)">
+                    <img src="assets/girasoles1.png" alt="Ramo de Girasoles">
+                    <span class="discount-badge">-20% OFF</span>
+                </div>
+                <div class="card-info">
+                    <h3>Bouquet "Rayos de Sol"</h3>
+                    <div class="price-container">
+                        <span class="price-new">$7.00</span>
+                        <span class="price-old">$9.00</span>
+                    </div>
+                    <button onclick="openModal(8)" class="btn-whatsapp-card" style="background-color: var(--color-gold); border-color: var(--color-gold);">
+                        Ver Detalles
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" style="border-color: var(--color-gold);">
+                <div class="card-image" onclick="openModal(9)">
+                    <img src="assets/flores-oso.png" alt="Ramo flores con oso de peluche">
+                    <span class="discount-badge">-25% OFF</span>
+                </div>
+                <div class="card-info">
+                    <h3>Ramo flores con oso de peluche</h3>
+                    <div class="price-container">
+                        <span class="price-new">$45.00</span>
+                        <span class="price-old">$60.00</span>
+                    </div>
+                    <button onclick="openModal(9)" class="btn-whatsapp-card" style="background-color: var(--color-gold); border-color: var(--color-gold);">
+                        Ver Detalles
+                    </button>
+                </div>
+            </div>
+
+            <div class="product-card" style="border-color: var(--color-gold);">
+                <div class="card-image" onclick="openModal(10)">
+                    <img src="assets/arreglo-rosas.png" alt="Arreglo de rosas">
+                    <span class="discount-badge">-20% OFF</span>
+                </div>
+                <div class="card-info">
+                    <h3>Ramo 100 rosas</h3>
+                    <div class="price-container">
+                        <span class="price-new">$43.00</span>
+                        <span class="price-old">$54.00</span>
+                    </div>
+                    <button onclick="openModal(10)" class="btn-whatsapp-card" style="background-color: var(--color-gold); border-color: var(--color-gold);">
+                        Ver Detalles
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <section class="special-touch container">
+        <div class="special-box">
+            
+            <h2 class="special-title">
+                Cada Flor Con Un <span style="font-style: italic;">Toque Especial Para Ti</span>
+            </h2>
+            
+            <p class="special-subtitle">Todos los arreglos de nuestra floristería siempre incluyen:</p>
+
+            <div class="special-grid">
+                
+                <div class="special-item">
+    
+                    <img src="assets/Mensaje.png" alt="Mensaje Personalizado" class="special-img">
+                    
+                    <h3>Mensaje<br>Personalizado</h3>
+                    <p>Incluimos una tarjeta con tus palabras para hacer el momento inolvidable.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-main">
+            
+            <div class="footer-column">
+                <span class="footer-title">Amaría Estudio Floral</span>
+                <p>
+                    Diseños florales personalizados, desayunos sorpresa y detalles únicos que cuentan historias. 
+                    Envíos seguros a domicilio en todo Ambato, Ecuador.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <span class="footer-title">Explorar</span>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo Completo</a></li>
+                    <li><a href="desayunos.html">Desayunos</a></li>
+                    <li><a href="licores.html">Licores</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <span class="footer-title">Síguenos</span>
+                <p style="margin-bottom: 0;">Conéctate con nosotros:</p>
+                
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/amaria_estudio.floral/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@amaria.estudio.fl" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://wa.me/593963087611" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Amaría Estudio Floral. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <div id="productModal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            
+            <div class="modal-body">
+                <div class="modal-images">
+                    <img id="modal-img" src="" alt="Producto detalle">
+                </div>
+
+                <div class="modal-info">
+                    <h2 id="modal-title">Nombre del Producto</h2>
+                    <p id="modal-price" class="modal-price">$00.00</p>
+                    <p id="modal-desc" class="modal-desc">Descripción aquí...</p>
+                    
+                    <a id="modal-whatsapp" href="#" target="_blank" class="btn btn-primary" style="width: 100%; text-align: center;">
+                        Pedir ahora en WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script/script.js"></script>
+
+</body>
+</html>

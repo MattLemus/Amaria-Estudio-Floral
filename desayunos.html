@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Desayunos Sorpresa en Ambato a Domicilio | Regalos | Amaría</title>
+    
+    <meta name="description" content="Envía los mejores desayunos sorpresa en Ambato. Menús deliciosos con pancakes, frutas y detalles personalizados a domicilio. ¡Reserva aquí!">
+    
+    <meta name="keywords" content="desayunos sorpresa ambato, desayunos a domicilio, regalos comestibles, detalles personalizados ambato">
+    <meta name="geo.region" content="EC-T">
+    <meta name="geo.placename" content="Ambato">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style/Style.css">
+</head>
+<body>
+
+    <header class="container">
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <a href="index.html" class="logo">
+                <div class="logo-text">
+                    AmarÍa<br>
+                    <span style="font-size:0.65em; letter-spacing:2px; opacity:0.9;">Estudio Floral</span>
+                </div>
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="desayunos.html">Desayunos</a>
+                <a href="licores.html">Licores</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header" style="padding-bottom: 20px;">
+        <h1>Desayunos Sorpresa</h1>
+        <p>
+            La mejor forma de empezar el día. Sorprende a tus seres queridos en Ambato 
+            con un despertar lleno de sabor y detalles únicos.
+        </p>
+        
+        <p class="price-note" style="margin-bottom: 30px;">
+            <i class="fas fa-info-circle"></i> 
+            Nota: El precio final varía según el menú y los detalles personalizados que elijas.
+        </p>
+
+        <div class="container" style="max-width: 900px; margin: 0 auto; background: #FFF9F5; border: 2px solid #C19A5B; border-radius: 15px; padding: 30px; text-align: left;">
+            <h3 style="text-align: center; color: #C19A5B; font-family: 'Playfair Display', serif; margin-bottom: 20px; font-size: 1.5rem;">
+                ✨ ¿Qué incluyen nuestros desayunos? ✨
+            </h3>
+
+            <p style="text-align: center; color: #555; margin-bottom: 30px; font-size: 1rem;">
+                Estos son algunos menús y modelos que puedes armar, contáctanos por WhatsApp para personalizarlo.
+            </p>
+            
+            <div style="display: flex; flex-wrap: wrap; gap: 30px; justify-content: center;">
+                
+                <div style="flex: 1; min-width: 280px;">
+                    <strong style="color: #C19A5B; font-size: 1.1rem; display: block; margin-bottom: 10px;">🥞 Opción 1 (Dulce)</strong>
+                    <ul style="list-style: none; padding: 0; color: #555; line-height: 1.8;">
+                        <li>• Pancakes de Nutella con fresas y bananas 🍓</li>
+                        <li>• Jugo natural de naranja 🍊</li>
+                        <li>• Porción de frutas (kiwi, fresa, mandarina, uvas) 🍇</li>
+                        <li>• Postre: pastel de chocolate 🍰</li>
+                        <li>• <strong>Incluye:</strong> cubiertos, caja de madera y globo personalizado 🎈</li>
+                        <li>• <strong>Elige:</strong> 1 o 2 fotos impresas 📸 O mini ramo 💐</li>
+                    </ul>
+                </div>
+
+                <div style="width: 1px; background-color: #C19A5B; opacity: 0.3; display: none; @media(min-width:768px){display:block;}"></div>
+
+                <div style="flex: 1; min-width: 280px;">
+                    <strong style="color: #C19A5B; font-size: 1.1rem; display: block; margin-bottom: 10px;">🥪 Opción 2 (Salado)</strong>
+                    <ul style="list-style: none; padding: 0; color: #555; line-height: 1.8;">
+                        <li>• Sándwich de jamón y queso 🧀</li>
+                        <li>• Jugo natural de naranja 🍊</li>
+                        <li>• Porción de frutas (kiwi, fresa, mandarina, uvas) 🍇</li>
+                        <li>• Postre: pastel de chocolate 🍰</li>
+                        <li>• <strong>Incluye:</strong> cubiertos, caja de madera y globo personalizado 🎈</li>
+                        <li>• <strong>Elige:</strong> 1 o 2 fotos impresas 📸 O mini ramo 💐</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="products-section container">
+        <div class="product-grid">
+
+            <div class="product-card">
+                <div class="card-image">
+                    <img src="assets/cumple1.png" alt="Desayuno Huellitas de Amor" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Desayuno "Huellitas de Amor"</h3>
+                    <p class="price">Desde $20.00</p>
+                    <a href="https://wa.me/593963087611?text=Hola%20Amaría,%20me%20interesa%20el%20desayuno%20sorpresa%20(Menú%201%20/%20Menú%202%20/%20Personalizado)" target="_blank" class="btn-whatsapp-card" style="text-decoration: none;">
+                        <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image">
+                    <img src="assets/cumple2.png" alt="Desayuno Ohana Love" loading="lazy">
+                    <span class="tag" style="background-color: #D9534F;">Popular</span>
+                </div>
+                <div class="card-info">
+                    <h3>Desayuno "Ohana Love"</h3>
+                    <p class="price">Desde $20.00</p>
+                    <a href="https://wa.me/593963087611?text=Hola%20Amaría,%20me%20interesa%20el%20desayuno%20sorpresa%20(Menú%201%20/%20Menú%202%20/%20Personalizado)" target="_blank" class="btn-whatsapp-card" style="text-decoration: none;">
+                        <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image">
+                    <img src="assets/cumple3.png" alt="Desayuno Mariposa Mágica" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Desayuno "Mariposa Mágica"</h3>
+                    <p class="price">Desde $20.00</p>
+                    <a href="https://wa.me/593963087611?text=Hola%20Amaría,%20me%20interesa%20el%20desayuno%20sorpresa%20(Menú%201%20/%20Menú%202%20/%20Personalizado)" target="_blank" class="btn-whatsapp-card" style="text-decoration: none;">
+                        <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image">
+                    <img src="assets/desayuno1.png" alt="Desayuno Golden Roses" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Desayuno "Golden Roses"</h3>
+                    <p class="price">Desde $20.00</p>
+                    <a href="https://wa.me/593963087611?text=Hola%20Amaría,%20me%20interesa%20el%20desayuno%20sorpresa%20(Menú%201%20/%20Menú%202%20/%20Personalizado)" target="_blank" class="btn-whatsapp-card" style="text-decoration: none;">
+                        <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image">
+                    <img src="assets/cumple4.png" alt="Desayuno Súper Papá" loading="lazy">
+                    <span class="tag" style="background-color: var(--color-gold);">Papá</span>
+                </div>
+                <div class="card-info">
+                    <h3>Desayuno "Súper Papá"</h3>
+                    <p class="price">Desde $20.00</p>
+                    <a href="https://wa.me/593963087611?text=Hola%20Amaría,%20me%20interesa%20el%20desayuno%20sorpresa%20(Menú%201%20/%20Menú%202%20/%20Personalizado)" target="_blank" class="btn-whatsapp-card" style="text-decoration: none;">
+                        <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+            <div class="product-card">
+                <div class="card-image">
+                    <img src="assets/regalo-papa.png" alt="Desayuno Sunrise" loading="lazy">
+                </div>
+                <div class="card-info">
+                    <h3>Desayuno "Sunrise"</h3>
+                    <p class="price">Desde $20.00</p>
+                    <a href="https://wa.me/593963087611?text=Hola%20Amaría,%20me%20interesa%20el%20desayuno%20sorpresa%20(Menú%201%20/%20Menú%202%20/%20Personalizado)" target="_blank" class="btn-whatsapp-card" style="text-decoration: none;">
+                        <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+                    </a>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-main">
+            
+            <div class="footer-column">
+                <span class="footer-title">Amaría Estudio Floral</span>
+                <p>
+                    Diseños florales personalizados, desayunos sorpresa y detalles únicos que cuentan historias. 
+                    Envíos seguros a domicilio en todo Ambato, Ecuador.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <span class="footer-title">Explorar</span>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo Completo</a></li>
+                    <li><a href="desayunos.html">Desayunos</a></li>
+                    <li><a href="licores.html">Licores</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <span class="footer-title">Síguenos</span>
+                <p style="margin-bottom: 0;">Conéctate con nosotros:</p>
+                
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/amaria_estudio.floral/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@amaria.estudio.fl" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://wa.me/593963087611" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Amaría Estudio Floral. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+
+</body>
+</html>
