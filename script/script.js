@@ -94,6 +94,18 @@ function openModal(productId) {
         modal.style.display = "block";
         document.body.style.overflow = "hidden";
     }
+
+    document.querySelectorAll('#productModal [data-aos]').forEach(el => {
+            el.classList.remove('aos-animate');
+        });
+
+        // 2. Esperar a que el modal abra y volver a animar
+        setTimeout(() => {
+            AOS.refreshHard(); // recalcula posiciones
+            document.querySelectorAll('#productModal [data-aos]').forEach(el => {
+                el.classList.add('aos-animate'); // activa fade-up
+            });
+    }, 150); // un pequeño delay para que funcione siempre
 }
 
 // FUNCIÓN PARA CERRAR MODAL
@@ -154,6 +166,7 @@ setInterval(() => {
     }
 }, 1000);
 Object.assign(productsData, {
+    
     11: {
         title: "Ramo Sueño Lila",
         price: "$20.00",
@@ -431,3 +444,4 @@ function toggleMenu() {
     const nav = document.getElementById("navLinks");
     nav.classList.toggle("active");
 }
+
