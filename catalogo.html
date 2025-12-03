@@ -423,16 +423,21 @@
 
     <div id="productModal" class="modal">
         <div class="modal-content">
-            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <button class="close-btn" onclick="closeModal()" type="button">&times;</button>
             <div class="modal-body">
                 <div class="modal-images">
                     <img id="modal-img" src="" alt="Producto detalle">
                 </div>
                 <div class="modal-info">
-                    <h2 id="modal-title">Nombre</h2>
-                    <p id="modal-price" class="modal-price">$00.00</p>
-                    <p id="modal-desc" class="modal-desc">Desc...</p>
-                    <a id="modal-whatsapp" href="#" target="_blank" class="btn btn-primary" style="width:100%; text-align:center;">Pedir en WhatsApp</a>
+                    <h2 id="modal-title" data-aos="fade-up">Nombre</h2>
+
+                    <p id="modal-price" class="modal-price" data-aos="fade-up" data-aos-delay="100">$00.00</p>
+
+                    <p id="modal-desc" class="modal-desc" data-aos="fade-up" data-aos-delay="200">Descripción...</p>
+
+                    <a id="modal-whatsapp" href="#" class="btn btn-primary" data-aos="fade-up" data-aos-delay="300">
+                        Pedir Ahora en WhatsApp
+                    </a>
                 </div>
             </div>
         </div>
@@ -447,5 +452,8 @@
             offset: 100     /* Empieza a animar un poco antes de que el elemento se vea */
         });
     </script>
+
+    
+
 </body>
 </html>
