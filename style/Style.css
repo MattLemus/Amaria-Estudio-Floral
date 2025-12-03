@@ -1134,45 +1134,54 @@ footer {
     
     .modal {
         padding: 0 !important;
-        overflow: hidden !important;   /* evita scroll del body */
     }
 
-    /* Contenedor que centra el modal → sigue fijo para que no se mueva */
+    /* El modal queda PEGADO a la pantalla → no se mueve ni 1 píxel */
     .modal-dialog {
         position: fixed !important;
-        top: 0 !important;
-        left: 0 !important;
-        right: 0 !important;
-        bottom: 0 !important;
-        margin: 0 !important;
-        max-width: none !important;
+        top: 0 !important; left: 0 !important;
         width: 100% !important;
         height: 100vh !important;
+        margin: 0 !important;
+        max-width: none !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        pointer-events: none !important;     /* importante */
+        pointer-events: none !important;           /* permite cerrar tocando fuera */
     }
 
-    /* La tarjeta blanca del modal */
+    /* La tarjeta blanca */
     .modal-content {
         pointer-events: auto !important;
-        margin: 20px !important;
         width: calc(100% - 40px) !important;
-        max-height: calc(100vh - 40px) !important;   /* ← deja espacio arriba y abajo */
+        max-height: calc(100vh - 40px) !important;
+        margin: 20px !important;
+        border-radius: 16px !important;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
         display: flex !important;
         flex-direction: column !important;
-        border-radius: 16px !important;
-        overflow: hidden !important;                /* importante para que el scroll quede solo dentro */
-        box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
+        overflow: hidden !important;
+        background: white;
     }
 
-    /* CLAVE: el scroll solo vive aquí */
+    /* ¡¡¡ LA CLAVE ABSOLUTA !!! */
     .modal-body {
-        overflow-y: auto !important;                /* ← scroll vertical cuando haga falta */
-        -webkit-overflow-scrolling: touch !important;  /* scroll suave en iOS */
-        overscroll-behavior: contain !important;       /* evita "rebote" raro */
-        padding: 15px !important;
+        overflow-y: auto !important;          /* permite scroll vertical */
+        overflow-x: hidden !important;        /* bloquea scroll horizontal */
+        -webkit-overflow-scrolling: touch !important;
+        
+        /* ESTAS DOS LÍNEAS HACEN QUE SEA IMPOSIBLE MOVER A LOS LADOS */
+        touch-action: pan-y pinch-zoom !important;   /* ← SOLO arriba/abajo + zoom */
+        overscroll-behavior-x: contain !important;
+        
+        padding: 16px !important;
+    }
+
+    /* Extra: si tienes imágenes o elementos que puedan generar scroll horizontal */
+    .modal-body img,
+    .modal-body * {
+        max-width: 100% !important;
+        touch-action: pan-y pinch-zoom !important;
     }
     /* 🔥 Imagen más grande */
     .modal-images {
@@ -1211,3 +1220,4 @@ footer {
         text-align: center
     }
 }
+
