@@ -63,26 +63,25 @@ nav {
 }
 
 .logo {
-    width: 110px;
-    height: 110px;
-    background-color: #fcece4;
-    border-radius: 50%;
+    width: 100px; /* Tamaño del logo en computadora */
+    height: 100px;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
     align-items: center;
-    text-align: center;
-    border: 1px solid rgba(193, 154, 91, 0.3);
+    justify-content: center;
+    
+    /* Si tu imagen ya es redonda o no quieres borde, quita estas 2 líneas: */
+    border-radius: 50%; 
+    border: none; /* Quitamos el borde dorado antiguo para que luzca la imagen */
+    
+    overflow: hidden; /* Asegura que la imagen no se salga */
+    padding: 0;
+    margin: 0;
 }
 
-.logo-text {
-    font-family: var(--font-serif);
-    color: var(--color-gold);
-    font-size: 1rem;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    line-height: 1.2;
+.logo img {
+    width: 150%;
+    height: 150%;
+    object-fit: contain; /* Ajusta la imagen sin recortarla */
 }
 
 .nav-links {
@@ -928,34 +927,24 @@ footer {
 
     /* 2. LOGO (Derecha) */
     .logo {
-        order: 2; 
-        margin: 0; 
+        order: 2;
+        margin: 0;
         display: flex;
         align-items: center;
         justify-content: center;
         
-        width: 70px;  /* Le damos un pelín más de espacio (antes 65px) */
-        height: 70px; /* Igualamos alto */
-        border: 2px solid var(--color-gold);
-        border-radius: 50%; /* Asegura que sea un círculo perfecto */
-        padding: 5px; /* Espacio interno para que la letra no toque el borde */
-        box-sizing: border-box; /* Para que el padding no agrande el círculo */
+        /* Tamaño en celular (más pequeño) */
+        width: 90px; 
+        height: 90px; 
+        
+        border: none; /* Sin borde */
+        padding: 0;
     }
     
-    .logo-text {
-        line-height: 1;
-        text-align: center;
-        font-size: 0.85rem; /* Letra más pequeña para que entre */
-        transform: scale(0.9); /* Truco: achica todo el texto un poco más */
-        width: 100%; /* Asegura que use todo el ancho disponible */
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
-    
-    .logo-text span {
-        font-size: 0.5rem !important; /* Fuerza a que 'ESTUDIO FLORAL' sea muy pequeño */
-        letter-spacing: 0px !important; /* Quita el espacio entre letras para que quepa */
+    .logo img {
+        width: 125%;
+        height: 125%;
+        object-fit: contain;
     }
 
     /* 3. EL MENÚ DESPLEGABLE (Oculto) */
@@ -1134,54 +1123,45 @@ footer {
     
     .modal {
         padding: 0 !important;
+        overflow: hidden !important;   /* evita scroll del body */
     }
 
-    /* El modal queda PEGADO a la pantalla → no se mueve ni 1 píxel */
+    /* Contenedor que centra el modal → sigue fijo para que no se mueva */
     .modal-dialog {
         position: fixed !important;
-        top: 0 !important; left: 0 !important;
-        width: 100% !important;
-        height: 100vh !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+        bottom: 0 !important;
         margin: 0 !important;
         max-width: none !important;
+        width: 100% !important;
+        height: 100vh !important;
         display: flex !important;
         align-items: center !important;
         justify-content: center !important;
-        pointer-events: none !important;           /* permite cerrar tocando fuera */
+        pointer-events: none !important;     /* importante */
     }
 
-    /* La tarjeta blanca */
+    /* La tarjeta blanca del modal */
     .modal-content {
         pointer-events: auto !important;
-        width: calc(100% - 40px) !important;
-        max-height: calc(100vh - 40px) !important;
         margin: 20px !important;
-        border-radius: 16px !important;
-        box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+        width: calc(100% - 40px) !important;
+        max-height: calc(100vh - 40px) !important;   /* ← deja espacio arriba y abajo */
         display: flex !important;
         flex-direction: column !important;
-        overflow: hidden !important;
-        background: white;
+        border-radius: 16px !important;
+        overflow: hidden !important;                /* importante para que el scroll quede solo dentro */
+        box-shadow: 0 10px 30px rgba(0,0,0,0.3) !important;
     }
 
-    /* ¡¡¡ LA CLAVE ABSOLUTA !!! */
+    /* CLAVE: el scroll solo vive aquí */
     .modal-body {
-        overflow-y: auto !important;          /* permite scroll vertical */
-        overflow-x: hidden !important;        /* bloquea scroll horizontal */
-        -webkit-overflow-scrolling: touch !important;
-        
-        /* ESTAS DOS LÍNEAS HACEN QUE SEA IMPOSIBLE MOVER A LOS LADOS */
-        touch-action: pan-y pinch-zoom !important;   /* ← SOLO arriba/abajo + zoom */
-        overscroll-behavior-x: contain !important;
-        
-        padding: 16px !important;
-    }
-
-    /* Extra: si tienes imágenes o elementos que puedan generar scroll horizontal */
-    .modal-body img,
-    .modal-body * {
-        max-width: 100% !important;
-        touch-action: pan-y pinch-zoom !important;
+        overflow-y: auto !important;                /* ← scroll vertical cuando haga falta */
+        -webkit-overflow-scrolling: touch !important;  /* scroll suave en iOS */
+        overscroll-behavior: contain !important;       /* evita "rebote" raro */
+        padding: 15px !important;
     }
     /* 🔥 Imagen más grande */
     .modal-images {
@@ -1220,4 +1200,3 @@ footer {
         text-align: center
     }
 }
-
