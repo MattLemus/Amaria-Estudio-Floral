@@ -235,7 +235,7 @@ Object.assign(productsData, {
     },
     22: {
         title: "Ramo Encanto Lila",
-        price: "$15.00",
+        price: "$16.00",
         description: "Una explosión de texturas con gerberas blancas, rosas pálidas y espuelas de caballero en tonos lila. Envuelto en papel coreano de lujo. Un perfecto regalo para demostrar admiración y amistad sincera.",
         images: ["assets/blancas-rosadas-moradas.png"]
     },
@@ -328,6 +328,36 @@ Object.assign(productsData, {
         price: "$15.00",
         description: "Diseño vertical y silvestre. Combina rosas rosadas con 'Perritos' (Antirrhinum) y crisantemos blancos. Decorado con mariposa dorada. Un perfecto regalo para agradecer o sorprender sin motivo.",
         images: ["assets/variedad2.png"]
+    },
+    38: {
+        title: "Bouquet Dulzura Bicolor",
+        price: "$20.00",
+        description: "Hermoso bouquet redondo combinando rosas blancas y color durazno/rosado. Decorado con abundante follaje de eucalipto que brinda un aroma fresco y papel coreano en tonos pastel. Incluye tarjeta dedicatoria. Un perfecto regalo para demostrar cariño con elegancia y suavidad.",
+        images: ["assets/nuevo1.png"]
+    },
+    39: {
+        title: "Box Corbata Gourmet",
+        price: "$17.00",
+        description: "Original caja en forma de corbata, ideal para sorprender. Incluye: Vino personal (Gato Negro o similar), variedad de quesos, jamón serrano, aceitunas, pretzels, chocolates y snacks salados. Decoración temática 'Feliz Día Papá'. Un perfecto regalo para celebrar a papá con estilo y sabor.",
+        images: ["assets/nuevo2.png"]
+    },
+    40: {
+        title: "Ramo Sueño Azul",
+        price: "$12.00",
+        description: "Impactante ramo de rosas tinturadas en azul intenso, envueltas en papel negro y dorado para un contraste de lujo. Incluye tarjeta personalizada. Un perfecto regalo para hombres o personas que aman lo único y diferente.",
+        images: ["assets/nuevo3.png"]
+    },
+    41: {
+        title: "Box Súper Papá Express",
+        price: "$8.00",
+        description: "Detalle económico y delicioso. Caja visor decorada con bigotes que incluye una Cerveza Coronita y 4 fresas cubiertas con chocolate gourmet. Un perfecto regalo para un antojo especial en su día.",
+        images: ["assets/nuevo4.png"]
+    },
+    42: {
+        title: "Ramo Lirios del Encanto",
+        price: "$8.00",
+        description: "Sencillez que enamora. Ramo de lirios rosados frescos envueltos en papel traslúcido rosa. Ideal para quienes aman los aromas florales naturales. Un perfecto regalo para un detalle espontáneo.",
+        images: ["assets/nuevo5.png"]
     }
 });
 function filterByPrice(range) {
