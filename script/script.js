@@ -355,7 +355,7 @@ Object.assign(productsData, {
     },
     42: {
         title: "Ramo Lirios del Encanto",
-        price: "$8.00",
+        price: "$20.00",
         description: "Sencillez que enamora. Ramo de lirios rosados frescos envueltos en papel traslúcido rosa. Ideal para quienes aman los aromas florales naturales. Un perfecto regalo para un detalle espontáneo.",
         images: ["assets/nuevo5.png"]
     }
@@ -474,4 +474,5 @@ function toggleMenu() {
     const nav = document.getElementById("navLinks");
     nav.classList.toggle("active");
 }
+
 
