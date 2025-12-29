@@ -181,7 +181,7 @@ Object.assign(productsData, {
     },
     13: {
         title: "Ramo Feliz Día Princesa",
-        price: "$25.00",
+        price: "$32.00",
         description: "Rosas rojas y rosadas de alta calidad, decoradas con una corona dorada, mariposa brillante y cinta con la frase 'Feliz Cumpleaños'. Incluye perlas decorativas y tarjeta. Un perfecto regalo para hacerla sentir como una reina en su día.",
         images: ["assets/flores-cumple.png"]
     },
@@ -474,5 +474,6 @@ function toggleMenu() {
     const nav = document.getElementById("navLinks");
     nav.classList.toggle("active");
 }
+
 
 
