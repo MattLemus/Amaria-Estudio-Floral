@@ -1200,3 +1200,32 @@ footer {
         text-align: center
     }
 }
+/* --- SECCIÓN DE UBICACIÓN --- */
+.location-section {
+    padding: 60px 20px;
+    background-color: #fff; /* O puedes usar #FFF9F5 si quieres el fondo crema */
+}
+
+.map-container {
+    width: 100%;
+    max-width: 1000px; /* Ancho máximo para que no se estire demasiado */
+    margin: 0 auto;
+    border-radius: 15px;
+    overflow: hidden; /* Para que el mapa respete los bordes redondeados */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* Sombra elegante */
+    border: 2px solid var(--color-gold); /* Borde dorado opcional */
+}
+
+.map-container iframe {
+    display: block; /* Elimina espacios extraños abajo del iframe */
+}
+
+/* Ajuste Móvil */
+@media (max-width: 768px) {
+    .map-container {
+        height: 300px; /* Mapa un poco más bajo en celulares */
+    }
+    .map-container iframe {
+        height: 100%;
+    }
+}
