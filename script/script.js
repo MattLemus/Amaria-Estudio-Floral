@@ -241,8 +241,8 @@ Object.assign(productsData, {
     },
     23: {
         title: "Florero Elegancia Pura",
-        price: "$22.00",
-        description: "Arreglo premium en base de vidrio. Contiene lirios blancos, rosas rosadas, claveles y follaje fino. Diseño alto y sofisticado. Un perfecto regalo para decorar el hogar o impresionar en una fecha importante.",
+        price: "$25.00",
+        description: "Arreglo premium. Contiene lirios blancos, rosas rosadas, claveles y follaje fino. Diseño alto y sofisticado. Un perfecto regalo para decorar el hogar o impresionar en una fecha importante.",
         images: ["assets/blancas-rosadas-negras.png"]
     },
     24: {
@@ -474,6 +474,7 @@ function toggleMenu() {
     const nav = document.getElementById("navLinks");
     nav.classList.toggle("active");
 }
+
 
 
 
