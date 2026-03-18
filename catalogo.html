@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Catálogo de Flores en Ambato | Ramos Buchones y Cajas | Amaría</title>
+    <meta name="description" content="Explora nuestro catálogo completo de arreglos florales. Ramos buchones, cajas de rosas, girasoles y detalles personalizados con envío a domicilio en Ambato.">
+    <meta name="keywords" content="catalogo flores ambato, ramos buchones, cajas de rosas, arreglos florales ecuador, floristería online, regalos personalizados">
+
+    <meta name="geo.region" content="EC-T">
+    <meta name="geo.placename" content="Ambato">
+    <meta name="geo.position" content="-1.2491;-78.6167">
+    <meta name="ICBM" content="-1.2491, -78.6167">
+
+    <meta property="og:title" content="Catálogo de Flores y Regalos en Ambato | Amaría">
+    <meta property="og:description" content="Encuentra el detalle perfecto. Ramos de rosas, girasoles y cajas sorpresa a domicilio en Ambato.">
+    <meta property="og:image" content="assets/buchon1.png"> 
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://amariaestudiofloral.com/catalogo.html">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <meta name="theme-color" content="#C19A5B">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/Style.css"> 
+
+    <script type="application/ld+json">
+        {
+        "@context": "https://schema.org",
+        "@type": "Florist",
+        "name": "Amaría Estudio Floral",
+        "image": "https://amariaestudiofloral.com/assets/buchon1.png",
+        "@id": "https://amariaestudiofloral.com",
+        "url": "https://amariaestudiofloral.com",
+        "telephone": "+593963087611",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Ambato",
+            "addressLocality": "Ambato",
+            "addressRegion": "Tungurahua",
+            "postalCode": "180150",
+            "addressCountry": "EC"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": -1.2491,
+            "longitude": -78.6167
+        },
+        "openingHoursSpecification": {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday",
+            "Friday",
+            "Saturday"
+            ],
+            "opens": "08:00",
+            "closes": "19:00"
+        },
+        "priceRange": "$10 - $25"
+        }
+    </script>
+    
+</head>
+<body>
+
+    <header class="container">
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <a href="index.html" class="logo" data-aos="fade-up">
+                <img src="assets/loguito.png" alt="Amaría Estudio Floral">
+            </a>
+
+            <div class="nav-links" id="navLinks" data-aos="fade-up">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="desayunos.html">Desayunos</a>
+                <a href="licores.html">Licores</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header">
+        <h1>El Regalo Perfecto</h1>
+        <p>Elige la ocasión especial y encuentra el detalle ideal para sorprender.</p>
+        <div style="text-align: center; margin-bottom: 30px;">
+            <span style="color: #999; font-size: 0.8rem; letter-spacing: 1px; display: block; margin-bottom: 1px;">NUESTRAS COLECCIONES:</span>
+            
+            <div class="tags-container">
+                <span class="static-tag">Personalizado ✨</span>
+                <span class="static-tag">Cumpleaños 🎉</span>
+                <span class="static-tag">Amor ❤️</span>
+                <span class="static-tag">Aniversario 💍</span>
+            </div>
+        </div>
+    </section>
+
+    <section class="container products-section">
+        
+        <div class="filter-container">
+            <span style="width: 100%; text-align: center; color: #999; font-size: 0.8rem; margin-bottom: 5px;">TU PRESUPUESTO:</span>
+            
+            <button class="filter-btn price-btn active" onclick="filterByPrice('all')">Todos</button>
+            <button class="filter-btn price-btn" onclick="filterByPrice('low')">Hasta $20 (Detalles)</button>
+            <button class="filter-btn price-btn" onclick="filterByPrice('mid')">$21 - $35 (Lo más vendido)</button>
+            <button class="filter-btn price-btn" onclick="filterByPrice('high')">Más de $35 (Premium)</button>
+        </div>
+
+
+        <div class="product-grid" style="grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));">
+
+            <div class="product-card" data-category="cumpleanos"  data-aos="fade-up">
+                <a href="producto.html?id=11" class="card-image">
+                    <img src="assets/pulpo-flores.png" alt="Ramo Lavanda y Rosa">
+                    <span class="tag">Elegante</span>
+                </a>
+                <div class="card-info">
+                    <h3>Ramo "Sueño Lila"</h3>
+                    <p class="price">$20.00</p>
+                    <a href="producto.html?id=11" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="amor"  data-aos="fade-up">
+                <a href="producto.html?id=12" class="card-image">
+                    <img src="assets/flores-blancas-girasol.png" alt="Ramo con Girasol">
+                </a>
+                <div class="card-info">
+                    <h3>Bouquet "Luz de Amor"</h3>
+                    <p class="price">$45.00</p>
+                    <a href="producto.html?id=12" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="cumpleanos"  data-aos="fade-up">
+                <a href="producto.html?id=13" class="card-image">
+                    <img src="assets/flores-cumple.png" alt="Ramo Rosas Feliz Cumpleaños">
+                    <span class="tag" style="background-color: #D9534F;">Popular</span>
+                </a>
+                <div class="card-info">
+                    <h3>Ramo "Feliz Día Princesa"</h3>
+                    <p class="price">$25.00</p>
+                    <a href="producto.html?id=13" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="cumpleanos"  data-aos="fade-up">
+                <a href="producto.html?id=14" class="card-image">
+                    <img src="assets/grande.png" alt="Ramo Tonos Pastel">
+                </a>
+                <div class="card-info">
+                    <h3>Bouquet "Fantasía Pastel"</h3>
+                    <p class="price">$30.00</p>
+                    <a href="producto.html?id=14" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="aniversario" data-aos="fade-up">
+                <a href="producto.html?id=15" class="card-image">
+                    <img src="assets/lirios-caja.png" alt="Arreglo en Caja Rosa">
+                </a>
+                <div class="card-info">
+                    <h3>Box "Jardín Secreto"</h3>
+                    <p class="price">$25.00</p>
+                    <a href="producto.html?id=15" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="amor" data-aos="fade-up">
+                <a href="producto.html?id=16" class="card-image">
+                    <img src="assets/Jarros-flores.png" alt="Caja Cilíndrica Elegante">
+                </a>
+                <div class="card-info">
+                    <h3>Cilindro "Amor Puro"</h3>
+                    <p class="price">$50.00</p>
+                    <a href="producto.html?id=16" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="amor"  data-aos="fade-up">
+                <a href="producto.html?id=17" class="card-image">
+                    <img src="assets/love.png" alt="Ramo Love First Sight">
+                </a>
+                <div class="card-info">
+                    <h3>Ramo "Amor a Primera Vista"</h3>
+                    <p class="price">$20.00</p>
+                    <a href="producto.html?id=17" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="amor" data-aos="fade-up">
+                <a href="producto.html?id=18" class="card-image">
+                    <img src="assets/love1.png" alt="Arreglo I Love You">
+                    <span class="tag" style="background-color: #D9534F;">Exclusivo</span>
+                </a>
+                <div class="card-info">
+                    <h3>Set "Te Amo" con Chocolates</h3>
+                    <p class="price">$30.00</p>
+                    <a href="producto.html?id=18" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-category="cumpleanos" data-aos="fade-up">
+                <a href="producto.html?id=19" class="card-image">
+                    <img src="assets/pelota-flores.png" alt="Ramo Girasoles y Rosas">
+                </a>
+                <div class="card-info">
+                    <h3>Mega Bouquet "Sol Radiante"</h3>
+                    <p class="price">$40.00</p>
+                    <a href="producto.html?id=19" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+    
+            <div class="product-card" data-aos="fade-up">
+                <a href="producto.html?id=20" class="card-image">
+                    <img src="assets/doc-arreglos.png" alt="Arreglo Doctora Favorita" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Ramo "Doctora Favorita"</h3>
+                    <p class="price">$17.00</p>
+                    <a href="producto.html?id=20" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up">
+                <a href="producto.html?id=21" class="card-image">
+                    <img src="assets/blancas-rosadas.png" alt="Bouquet Lirios Rosa" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Bouquet "Dulzura Rosa"</h3>
+                    <p class="price">$17.00</p>
+                    <a href="producto.html?id=21" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up">
+                <a href="producto.html?id=22" class="card-image">
+                    <img src="assets/blancas-rosadas-moradas.png" alt="Ramo Tonos Lila" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Ramo "Encanto Lila"</h3>
+                    <p class="price">$16.00</p>
+                    <a href="producto.html?id=22" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up">
+                <a href="producto.html?id=23" class="card-image">
+                    <img src="assets/blancas-rosadas-negras.png" alt="Florero Elegancia" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Florero "Elegancia Pura"</h3>
+                    <p class="price">$22.00</p>
+                    <a href="producto.html?id=23" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up">
+                <a href="producto.html?id=24" class="card-image">
+                    <img src="assets/bolso-flores.png" alt="Bolso Fresh Flower" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Bag "Fresh Flowers"</h3>
+                    <p class="price">$8.00</p>
+                    <a href="producto.html?id=24" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card"   data-aos="fade-up">
+                <a href="producto.html?id=25" class="card-image">
+                    <img src="assets/bonito.png" alt="Bouquet Simpatía" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Bouquet "Simpatía"</h3>
+                    <p class="price">$7.00</p>
+                    <a href="producto.html?id=25" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up">
+                <a href="producto.html?id=26" class="card-image">
+                    <img src="assets/bonito1.png" alt="Ramo Luz de Luna" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Ramo "Luz de Luna"</h3>
+                    <p class="price">$10.00</p>
+                    <a href="producto.html?id=26" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up">
+                <a href="producto.html?id=27" class="card-image">
+                    <img src="assets/cumpleaños-romatico.png" alt="Ramo Cumpleaños Amor" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Ramo "Amor de Cumpleaños"</h3>
+                    <p class="price">$35.00</p>
+                    <a href="producto.html?id=27" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up">
+                <a href="producto.html?id=28" class="card-image">
+                    <img src="assets/flor-centro.png" alt="Ramo Círculo de Amor" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Ramo "Círculo de Amor"</h3>
+                    <p class="price">$20.00</p>
+                    <a href="producto.html?id=28" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card"   data-aos="fade-up">
+                <a href="producto.html?id=29" class="card-image">
+                    <img src="assets/florero.png" alt="Florero Alegría Naranja" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Florero "Alegría Naranja"</h3>
+                    <p class="price">$25.00</p>
+                    <a href="producto.html?id=29" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+            <div class="product-card" data-aos="fade-up">
+                <a href="producto.html?id=30" class="card-image">
+                    <img src="assets/rojas-blancas.png" alt="Ramo Amor Bicolor" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Ramo "Amor Bicolor"</h3>
+                    <p class="price">$10.00</p>
+                    <a href="producto.html?id=30" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up">
+                <a href="producto.html?id=31" class="card-image">
+                    <img src="assets/rosa-con-globo.png" alt="Caja La Mejor Doctora" loading="lazy">
+                    <span class="tag" style="background-color: var(--color-gold);">Especial</span>
+                </a>
+                <div class="card-info">
+                    <h3>Box "La Mejor Doctora"</h3>
+                    <p class="price">$25.00</p>
+                    <a href="producto.html?id=31" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up">
+                <a href="producto.html?id=32" class="card-image">
+                    <img src="assets/Rosas-blanca-centro.png" alt="Bouquet Dulzura Pastel" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Bouquet "Dulzura Pastel"</h3>
+                    <p class="price">$12.00</p>
+                    <a href="producto.html?id=32" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up">
+                <a href="producto.html?id=33" class="card-image">
+                    <img src="assets/rosas-blancas-rosas.png" alt="Ramo Sueño de Mariposas" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Ramo "Sueño de Mariposas"</h3>
+                    <p class="price">$33.00</p>
+                    <a href="producto.html?id=33" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up">
+                <a href="producto.html?id=34" class="card-image">
+                    <img src="assets/rosas-rosadas.png" alt="Ramo Fantasía Fucsia" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Ramo "Fantasía Fucsia"</h3>
+                    <p class="price">$10.00</p>
+                    <a href="producto.html?id=34" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up">
+                <a href="producto.html?id=35" class="card-image">
+                    <img src="assets/variedad.png" alt="Bouquet Jardín Primaveral" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Bouquet "Jardín Primaveral"</h3>
+                    <p class="price">$50.00</p>
+                    <a href="producto.html?id=35" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up">
+                <a href="producto.html?id=36" class="card-image">
+                    <img src="assets/variedad1.png" alt="Ramo Pasión Elegante" loading="lazy">
+                    <span class="tag" style="background-color: #000;">Premium</span>
+                </a>
+                <div class="card-info">
+                    <h3>Ramo "Pasión Elegante"</h3>
+                    <p class="price">$22.00</p>
+                    <a href="producto.html?id=36" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card"   data-aos="fade-up">
+                <a href="producto.html?id=37" class="card-image">
+                    <img src="assets/variedad2.png" alt="Ramo Encanto Natural" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Ramo "Encanto Natural"</h3>
+                    <p class="price">$15.00</p>
+                    <a href="producto.html?id=37" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up">
+                <a href="producto.html?id=38" class="card-image">
+                    <img src="assets/nuevo1.png" alt="Ramo Rosas Bicolor" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Bouquet "Dulzura Bicolor"</h3>
+                    <p class="price">$20.00</p>
+                    <a href="producto.html?id=38" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+
+            <div class="product-card" data-aos="fade-up">
+                <a href="producto.html?id=42" class="card-image">
+                    <img src="assets/nuevo5.png" alt="Ramo de Lirios" loading="lazy">
+                </a>
+                <div class="card-info">
+                    <h3>Ramo "Lirios del Encanto"</h3>
+                    <p class="price">$8.00</p>
+                    <a href="producto.html?id=42" class="btn-whatsapp-card">Ver Detalles</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+        <footer>
+        <div class="footer-main">
+            
+            <div class="footer-column">
+                <span class="footer-title">Amaría Estudio Floral</span>
+                <p>
+                    Diseños florales personalizados, desayunos sorpresa y detalles únicos que cuentan historias. 
+                    Envíos seguros a domicilio en todo Ambato, Ecuador.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <span class="footer-title">Explorar</span>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo Completo</a></li>
+                    <li><a href="desayunos.html">Desayunos</a></li>
+                    <li><a href="licores.html">Licores</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <span class="footer-title">Síguenos</span>
+                <p style="margin-bottom: 0;">Conéctate con nosotros:</p>
+                
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/amaria_estudio.floral/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@amaria.estudio.fl" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://wa.me/593963087611" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Amaría Estudio Floral. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000, /* Duración: 1 segundo (hace que sea suave) */
+            once: true,     /* La animación solo ocurre una vez al bajar (más elegante) */
+            offset: 100     /* Empieza a animar un poco antes de que el elemento se vea */
+        });
+    </script>
+
+    
+
+</body>
+</html>

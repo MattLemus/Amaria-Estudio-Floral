@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Detalle del Producto | Amaría Estudio Floral</title>
+    <meta name="description" content="Detalle del producto - Amaría Estudio Floral. Ramos, cajas y arreglos florales en Ambato con envío a domicilio.">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="shortcut icon" href="favicon.ico">
+
+    <meta name="theme-color" content="#C19A5B">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="style/Style.css">
+</head>
+<body>
+
+    <header class="container">
+        <nav>
+            <div class="menu-toggle" onclick="toggleMenu()">
+                <i class="fas fa-bars"></i>
+            </div>
+
+            <a href="index.html" class="logo">
+                <img src="assets/loguito.png" alt="Amaría Estudio Floral">
+            </a>
+
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Inicio</a>
+                <a href="catalogo.html">Catálogo</a>
+                <a href="desayunos.html">Desayunos</a>
+                <a href="licores.html">Licores</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="product-detail-section container">
+        <a href="catalogo.html" class="back-link" data-aos="fade-right">
+            <i class="fas fa-arrow-left"></i> Volver al Catálogo
+        </a>
+
+        <div class="product-detail-grid">
+            <div class="product-detail-image" data-aos="fade-right">
+                <img id="detail-img" src="" alt="Producto">
+            </div>
+
+            <div class="product-detail-info" data-aos="fade-left">
+                <h1 id="detail-title" class="product-detail-title">Cargando...</h1>
+                <p id="detail-price" class="product-detail-price"></p>
+                <div class="product-detail-divider"></div>
+                <p id="detail-desc" class="product-detail-desc"></p>
+
+                <a id="detail-whatsapp" href="#" class="btn btn-primary product-detail-whatsapp" target="_blank">
+                    <i class="fab fa-whatsapp"></i> Pedir Ahora en WhatsApp
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="suggested-section container">
+        <h2 class="section-title" data-aos="fade-up">También Te Puede Gustar</h2>
+        <div class="suggested-grid" id="suggested-grid" data-aos="fade-up">
+            <!-- Se llena con JS -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-main">
+            <div class="footer-column">
+                <span class="footer-title">Amaría Estudio Floral</span>
+                <p>
+                    Diseños florales personalizados, desayunos sorpresa y detalles únicos que cuentan historias. 
+                    Envíos seguros a domicilio en todo Ambato, Ecuador.
+                </p>
+            </div>
+
+            <div class="footer-column">
+                <span class="footer-title">Explorar</span>
+                <ul class="footer-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="catalogo.html">Catálogo Completo</a></li>
+                    <li><a href="desayunos.html">Desayunos</a></li>
+                    <li><a href="licores.html">Licores</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <span class="footer-title">Síguenos</span>
+                <p style="margin-bottom: 0;">Conéctate con nosotros:</p>
+                
+                <div class="social-icons">
+                    <a href="https://www.instagram.com/amaria_estudio.floral/" target="_blank">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@amaria.estudio.fl" target="_blank">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://wa.me/593963087611" target="_blank">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>&copy; 2025 Amaría Estudio Floral. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script/script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+
+        // Cargar datos del producto
+        (function loadProductDetail() {
+            const params = new URLSearchParams(window.location.search);
+            const productId = params.get('id');
+
+            if (!productId || !productsData[productId]) {
+                window.location.href = 'catalogo.html';
+                return;
+            }
+
+            const product = productsData[productId];
+
+            document.getElementById('detail-title').innerText = product.title;
+            document.getElementById('detail-price').innerText = product.price;
+            document.getElementById('detail-desc').innerText = product.description;
+            document.getElementById('detail-img').src = product.images[0];
+            document.getElementById('detail-img').alt = product.title;
+
+            document.title = product.title + ' | Amaría Estudio Floral';
+
+            const mensaje = `Hola Amaría, estoy interesado en el ${product.title} que vi en la web.`;
+            document.getElementById('detail-whatsapp').href = `https://wa.me/593963087611?text=${encodeURIComponent(mensaje)}`;
+
+            // --- PRODUCTOS SUGERIDOS ---
+            const currentCategory = product.category || '';
+            const currentPrice = parseFloat(product.price.replace(/[^0-9.]/g, '')) || 0;
+
+            // Obtener todos los productos excepto el actual
+            const allProducts = Object.entries(productsData)
+                .filter(([id]) => id !== productId)
+                .map(([id, p]) => {
+                    const pPrice = parseFloat(p.price.replace(/[^0-9.]/g, '')) || 0;
+                    return {
+                        id,
+                        ...p,
+                        numPrice: pPrice,
+                        sameCategory: p.category === currentCategory,
+                        priceDiff: Math.abs(pPrice - currentPrice)
+                    };
+                });
+
+            // Ordenar: primero misma categoría, luego por cercanía de precio
+            allProducts.sort((a, b) => {
+                if (a.sameCategory && !b.sameCategory) return -1;
+                if (!a.sameCategory && b.sameCategory) return 1;
+                return a.priceDiff - b.priceDiff;
+            });
+
+            // Tomar los 4 primeros
+            const suggested = allProducts.slice(0, 4);
+
+            const grid = document.getElementById('suggested-grid');
+            suggested.forEach(item => {
+                const card = document.createElement('a');
+                card.href = `producto.html?id=${item.id}`;
+                card.className = 'suggested-card';
+                card.innerHTML = `
+                    <div class="suggested-card-image">
+                        <img src="${item.images[0]}" alt="${item.title}" loading="lazy">
+                    </div>
+                    <div class="suggested-card-info">
+                        <h3>${item.title}</h3>
+                        <p class="price">${item.price}</p>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        })();
+    </script>
+
+</body>
+</html>
